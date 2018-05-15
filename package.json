@@ -4,11 +4,13 @@
   "description": "Biblioteca do curso de JS com TDD na prática",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Digo498/js-tdd-course.git"
+    "url": "git+https://github.com/Digo498/js-tdd-course.git",
+    "prepush": "npm run lint"
   },
   "keywords": [
     "js",
