@@ -5,6 +5,9 @@
     <title>1 - Intro Arrow Function</title>
   </head>
   <body>
+
+    <button id="btn">CLICK ME!</button>
+
   </body>
 
   <script>
@@ -32,6 +35,17 @@
 
     console.log(love);
     console.log(loveChain);
+
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', function() {
+      console.log(this);
+
+
+<!-- Em uma =>, o contexto geral eh a window (this eh a window inteira)-->
+<!--Em uma function, o contexto eh todo o objeto em q a funcao esta inserida (this chama a propria funcao)-->
+    })
+
+
 
   </script>
 </html>
