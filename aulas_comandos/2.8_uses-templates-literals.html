@@ -3,6 +3,7 @@
 <head>
     <title>01 - Uses Template Literals</title>
 </head>
+
 <body>
 </body>
 
@@ -43,7 +44,7 @@
 
     function renderAuthor(name) {
       return (name) ? name : 'unknown';
-    }
+    }//The function is returns a value (the name or 'unknown') based on the condition (does name exist)
 
     const markup = `
       <article>
@@ -64,7 +65,6 @@
           <p>
             Author: ${renderAuthor(article.author)}
           </p>
-          Coisa de louco
         </footer>
       </article>
       `;
@@ -74,6 +74,7 @@
 
 
 
+//------------------------------------------------------------TAGGED TEMPLATES------------------------------------------------------------------------
 
 
 
