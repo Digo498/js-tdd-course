@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>01 - Uses Template Literals</title>
+</head>
+<body>
+</body>
+
+<script>
+    const ireland = {
+        live: 'Dublin',
+        love: 'Galway'
+    };
+    const text = 'Eu moro em ' + ireland.live + ' e sou apaixonado por ' + ireland.love+'!';
+
+    const newtext = `Eu moro em ${ireland.live} e sou apaixonado por ${ireland.love}!`;
+    // Fica mais limpo, sem o +, chama variavel com ${}
+
+    const fruits = 'banana'
+                  + `\n`
+                  + 'orange'
+                  +`n`
+                  + `apple`;
+
+    const newfruits =
+    `banana
+    orange
+    apple`;
+    //N precisa ficar pulando linha, eh so dar enter
+
+    console.log(text);
+    // console.log(newText);
+
+//----------------------------------------CRIANDO HTML DO JS-------------------------------------------------------------------
+
+    const article = {
+      title: 'Aprendendo Template Strings',
+        intro: 'Uma breve explicação de como se utilizar template strings do ES6 em seu código hoje!',
+        body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, officia, perspiciatis? Architecto, molestias autem. Repellat, laborum deserunt soluta necessitatibus. Tenetur illo, id magnam numquam neque illum temporibus, in qui eos.',
+        tags: ['es6', 'js', 'template-literal'],
+        author: 'Rodrigao'
+    }
+
+    function renderAuthor(name) {
+      return (name) ? name : 'unknown';
+    }
+
+    const markup = `
+      <article>
+        <header>
+            <h1>${article.title}</h1>
+        </header>
+        <section>
+          <p>
+            ${article.intro}
+          </p>
+        </section>
+        <footer>
+          <ul>
+            ${article.tags.map((tag) => `<li>
+              ${tag}
+            </li>`).join('')}
+          </ul>
+          <p>
+            Author: ${renderAuthor(article.author)}
+          </p>
+          Coisa de louco
+        </footer>
+      </article>
+      `;
+
+
+      document.body.innerHTML = markup;
+
+
+
+
+
+
+
+
+
+</script>
+</html>

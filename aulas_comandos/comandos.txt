@@ -1,2 +1,6 @@
-To start local server (needs npm install -g browser-sync)
-browser-sync start -s --file '.'
+To use atom html preview
+CTRL+SHIFT+H
+
+To use atom-wrap-in-tag
+Select a section, or not
+ALT+SHIFT+W
